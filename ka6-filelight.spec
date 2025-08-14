@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.04.3
+%define		kdeappsver	25.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		filelight
 Summary:	Filelight
 Name:		ka6-%{kaname}
-Version:	25.04.3
+Version:	25.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	dc99f26ffca7d44ad3e829ba57c585ee
+# Source0-md5:	316a895db9cd341e5466d08a02b66d2c
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -83,11 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 /etc/xdg/filelightrc
 %attr(755,root,root) %{_bindir}/filelight
 %{_desktopdir}/org.kde.filelight.desktop
-%{_iconsdir}/hicolor/128x128/apps/filelight.png
-%{_iconsdir}/hicolor/16x16/apps/filelight.png
-%{_iconsdir}/hicolor/22x22/apps/filelight.png
-%{_iconsdir}/hicolor/32x32/apps/filelight.png
-%{_iconsdir}/hicolor/48x48/apps/filelight.png
-%{_iconsdir}/hicolor/64x64/apps/filelight.png
+%{_iconsdir}/hicolor/*x*/apps/filelight.png
+%{_datadir}/kio/servicemenus/filelight.desktop
 %{_datadir}/metainfo/org.kde.filelight.appdata.xml
 %{_datadir}/qlogging-categories6/filelight.categories
